@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    // Webcomponents & Polymer
+    script(src='/bower_components/webcomponentsjs/webcomponents.js')
+    link(rel='import' href='/bower_components/polymer/polymer.html')
+
+    // Fonts
+    link(rel='import' href='/bower_components/font-roboto/roboto.html')
+
+    // Iron Elements
+    link(rel='import' href='/bower_components/iron-flex-layout/iron-flex-layout.html')
+
+    // Paper Elements
+    link(rel='import' href='/bower_components/paper-header-panel/paper-header-panel.html')
+    link(rel='import' href='/bower_components/paper-toolbar/paper-toolbar.html')
+    link(rel='import' href='/bower_components/paper-material/paper-material.html')
+    link(rel='import' href='/bower_components/paper-tabs/paper-tabs.html')
+
+  body(unresolved class="fullbleed layout vertical")
+    paper-header-panel(class="flex")
+      paper-toolbar
+        paper-tabs
+          paper-tab Home
+          paper-tab Projects
+          paper-tab Resume
+
+      block content
