@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+    <!-- Webcomponents & Polymer -->
+    <script src='/bower_components/webcomponentsjs/webcomponents.js'></script>
+    <link rel='import' href='/bower_components/polymer/polymer.html'>
+    <!-- Fonts -->
+    <link rel='import' href='/bower_components/font-roboto/roboto.html'>
+    <!-- Iron Elements -->
+    <link rel='import' href='/bower_components/iron-flex-layout/iron-flex-layout.html'>
+    <link rel='import' href='/bower_components/iron-pages/iron-pages.html'>
+    <!-- Paper Elements -->
+    <link rel='import' href='/bower_components/paper-header-panel/paper-header-panel.html'>
+    <link rel='import' href='/bower_components/paper-toolbar/paper-toolbar.html'>
+    <link rel='import' href='/bower_components/paper-material/paper-material.html'>
+    <link rel='import' href='/bower_components/paper-tabs/paper-tabs.html'>
+    <link rel='import' href='/bower_components/paper-item/paper-item/html'>
+  </head>
+
+  <body unresolved class="fullbleed layout vertical">
+    <template is="dom-bind">
+      <paper-header-panel class="flex">
+        <paper-toolbar>
+          <paper-tabs selected="{{selected}}">
+            <paper-tab> Tab 1 </paper-tab>
+            <paper-tab> Tab 2 </paper-tab>
+            <paper-tab> Tab 3 </paper-tab>
+          </paper-tabs>
+        </paper-toolbar>
+        <section>
+          Layout 
+        </section>
+        <iron-pages selected="{{selected}}">
+          <section> 
+            Page 1 
+          </section>
+          <section> 
+            Page 2 
+          </section>
+          <section> 
+            Page 3 
+          </section>
+        </iron-pages>
+      </paper-header-panel>
+    </template>
+    <script>
+      // select the first page when site is loaded
+      document.addEventListener('WebComponentsReady', function () {
+        var template = document.querySelector('template[is="dom-bind"]');
+        template.selected = 0;
+      });
+    </script>
+  </body>
+</html>
