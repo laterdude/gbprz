@@ -20,6 +20,10 @@ paper-tab {
   font-size: 1.5em;
 }
 
+.blog-link {
+  color: white;
+}
+
 .intro {
   margin-top: 5px;
   padding: 15px;
