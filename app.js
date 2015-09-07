@@ -13,14 +13,6 @@ router.get('/', function(req, res, next) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-router.get('/resume', function(req, res, next){
-  var file = __dirname + "/public/resume.pdf";
-  fs.readFile(file, function (err, data){
-     res.contentType("application/pdf");
-     res.send(data);
-  });
-});
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 
